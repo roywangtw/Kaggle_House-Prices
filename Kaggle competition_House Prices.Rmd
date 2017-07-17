@@ -1,0 +1,52 @@
+---
+title: "Kaggle competition_House Prices"
+author: "Roy Wang"
+date: "7/17/2017"
+output: html_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, cache = FALSE)
+```
+## Introduction
+
+Hello everyone! I'm a machine learning novice, and this is my first kernal writup. 
+
+My random number is `r rnorm(10)`.
+
+```{r, echo=TRUE}
+set.seed(490)
+NewList <- sample(3:28, 5, replace = TRUE)
+```
+
+My sample is `r NewList`.
+
+```{r, echo=TRUE, results="hide"}
+x <- rnorm(10)
+y <- x + rnorm(10, sd = 3)
+plot(x, y, main = "My rnorm scatterplot")
+```
+
+Below is a table of linear regression:
+
+```{r, echo=TRUE}
+data("mtcars")
+linear.model <- lm(wt ~ ., data = mtcars)
+plot(linear.model)
+summary(linear.model)
+```
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars, echo=FALSE}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
